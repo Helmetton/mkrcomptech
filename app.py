@@ -32,8 +32,8 @@ st.markdown("Перевірка джерел через **Crossref API** для 
 if 'queue' not in st.session_state:
     st.session_state.queue = []
 
-# Форма вводу
-with st.form("input_form"):
+# Форма вводу (додано clear_on_submit=True для автоматичного очищення полів)
+with st.form("input_form", clear_on_submit=True):
     col1, col2 = st.columns([3, 1])
     with col1:
         title_input = st.text_input("📝 Назва статті:")
